@@ -21,7 +21,7 @@ function Cart() {
         {numOfItems > 0
           ? cartItems.map((item) => (
               <span key={item.name}>
-                {`${item.quantity} ${item.name} ${formatCurrency(item.price)}, Total: ${formatCurrency(item.price * item.quantity)} `}
+                {`${item.quantity ?? 0} ${item.name} ${formatCurrency(item.price)}, Total: ${formatCurrency(item.price * (item.quantity ?? 0))} `}
               </span>
             ))
           : 'Your cart is empty. Order Total: $0.00'}
@@ -58,10 +58,10 @@ function Cart() {
                   <div className="flex flex-col gap-100">
                     <h3 className="font-semibold text-rose-900">{item.name}</h3>
                     <div className="flex items-center gap-100">
-                      <p className="text-red font-semibold">{`${item.quantity}x`}</p>
+                      <p className="text-red font-semibold">{`${item.quantity ?? 0}x`}</p>
                       <p className="text-rose-500">{`@ ${formatCurrency(item.price)}`}</p>
                       <p className="font-semibold text-rose-500">
-                        {formatCurrency(item.price * item.quantity)}
+                        {formatCurrency(item.price * (item.quantity ?? 0))}
                       </p>
                     </div>
                   </div>

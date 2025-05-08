@@ -62,7 +62,7 @@ function Modal() {
                         </div>
                       </div>
                     </div>
-                    <p>{formatCurrency(item.price * item.quantity)}</p>
+                    <p>{formatCurrency(item.price * (item.quantity ?? 0))}</p>
                   </li>
                   {cartItems.length - 1 !== index && (
                     <hr className="my-200 border-t-rose-100" />

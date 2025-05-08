@@ -12,8 +12,8 @@ export function calculateCartTotals(cartItems: CartItem[]) {
   let orderTotal = 0;
 
   cartItems.forEach((item) => {
-    numOfItems += item.quantity;
-    orderTotal += item.quantity * item.price;
+    numOfItems += item.quantity ?? 0;
+    orderTotal += (item.quantity ?? 0) * item.price;
   });
 
   return { numOfItems, orderTotal };
