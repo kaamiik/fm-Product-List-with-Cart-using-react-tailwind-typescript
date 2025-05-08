@@ -4,6 +4,7 @@ import data from '../data/data.json';
 import { formatCurrency } from '../utils';
 
 import { CartItemsContext } from '../contexts/CartItemsContext';
+import type { CartItem } from '../types';
 
 function DessertItems() {
   const cartContext = React.useContext(CartItemsContext);
@@ -33,7 +34,10 @@ function DessertItems() {
                 />
               </picture>
               <div className="col-start-1 row-span-2 row-start-2 self-center justify-self-center">
-                <AddToCart currentQuantity={currentQuantity} item={item} />
+                <AddToCart
+                  currentQuantity={currentQuantity}
+                  item={item as CartItem}
+                />
                 <span className="sr-only">{item.name}</span>
               </div>
             </div>
