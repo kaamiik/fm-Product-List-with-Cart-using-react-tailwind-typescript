@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { calculateCartTotals } from '../utils';
-import type { CartItem } from '../utils';
+import type { CartItem } from '../types';
 import { CartItemsContext } from '../contexts/CartItemsContext';
 
 function CartItemsProvider({ children }: { children: React.ReactNode }) {

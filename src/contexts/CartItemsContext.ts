@@ -1,5 +1,5 @@
 import React from 'react';
-import { CartItem } from '../utils';
+import type { CartItem } from '../types';
 
 type CartItemsContextType = {
   cartItems: CartItem[];
