@@ -43,6 +43,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
+- TypeScript
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
@@ -53,6 +54,12 @@ Users should be able to:
 ### What I learned
 
 In this project, I learned about state management using the React Context API, which allowed me to efficiently manage and share state across components without prop drilling. I implemented multiple context providers for both cart state and modal ref management, demonstrating how to create and consume context in a React application. I also explored the use of `useRef` for managing component references. To improve accessibility, I added a `div` with the `sr-only` class to provide aria-live announcements for screen readers when items are added or removed. Furthermore, I used Tailwind v4 for this project, which does not require a `tailwind.config.js` file, and I utilized the `@theme` directive along with custom properties to add custom styles.
+
+**TypeScript Insights:**
+
+- I leveraged TypeScript to enforce type safety across the application, reducing runtime errors and improving code maintainability.
+- I created a dedicated `types` folder to centralize type definitions, such as the `CartItem` type, which is used across multiple components.
+- I used `import type` for importing types, ensuring clarity and optimizing performance.
 
 ## Author
 
