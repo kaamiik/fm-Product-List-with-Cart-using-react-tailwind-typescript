@@ -7,7 +7,7 @@ function Button({
 }: {
   type: 'remove' | 'primary';
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  children?: React.ReactNode;
+  children?: string;
 }) {
   if (type === 'remove') {
     return (
